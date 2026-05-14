@@ -1,0 +1,29 @@
+# IntelX_AI HITL Module Requirements
+# Install with: pip install -r requirements.txt
+
+# ── Core API ──────────────────────────────────────────────────
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+websockets>=12.0
+httpx>=0.27.0
+
+# ── Data models ───────────────────────────────────────────────
+pydantic>=2.0.0
+
+# ── Reviewer UI ───────────────────────────────────────────────
+streamlit>=1.35.0
+pandas>=2.0.0
+
+# ── Database ──────────────────────────────────────────────────
+aiosqlite>=0.20.0
+
+# ── Deduplication / fuzzy matching ───────────────────────────
+rapidfuzz>=3.0.0          # Preferred (fast C extension)
+# fuzzywuzzy>=0.18.0      # Fallback if rapidfuzz not available
+
+# ── Multilingual transliteration ─────────────────────────────
+indic-transliteration>=2.3.0   # Devanagari, Tamil, Telugu, Kannada, etc.
+transliterate>=1.10.2           # Cyrillic, Greek, Armenian
+
+# ── Environment ───────────────────────────────────────────────
+python-dotenv>=1.0.0
